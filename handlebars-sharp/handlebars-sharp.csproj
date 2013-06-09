@@ -41,7 +41,52 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Collections\Generic\OrderedDictionary.cs" />
+    <Compile Include="Collections\Specialized\PropertyDictionary.cs" />
+    <Compile Include="Core\Arguments\ArgumentFactory.cs" />
+    <Compile Include="Core\Arguments\ArgumentList.cs" />
+    <Compile Include="Core\Arguments\IntegerArgument.cs" />
+    <Compile Include="Core\Arguments\LocalVariableArgument.cs" />
+    <Compile Include="Core\Arguments\NestedVariableArgument.cs" />
+    <Compile Include="Core\Arguments\NullArgument.cs" />
+    <Compile Include="Core\Arguments\ParentVariableArgument.cs" />
+    <Compile Include="Core\Arguments\RecursiveVariableArgument.cs" />
+    <Compile Include="Core\Arguments\StrictVariableArgument.cs" />
+    <Compile Include="Core\Arguments\StringArgument.cs" />
+    <Compile Include="Core\Arguments\ThisArgument.cs" />
+    <Compile Include="Core\Arguments\VariableArgument.cs" />
+    <Compile Include="Core\Compiler.cs" />
+    <Compile Include="Core\Context.cs" />
+    <Compile Include="Core\Elements\BlockElement.cs" />
+    <Compile Include="Core\Elements\ConditionalElement.cs" />
+    <Compile Include="Core\Elements\Element.cs" />
+    <Compile Include="Core\Elements\StaticElement.cs" />
+    <Compile Include="Core\Elements\VariableElement.cs" />
+    <Compile Include="Core\EvaluationResult.cs" />
+    <Compile Include="Core\Interfaces\IArgument.cs" />
+    <Compile Include="Core\Interfaces\IBlockTag.cs" />
+    <Compile Include="Core\Interfaces\IConditionalTag.cs" />
+    <Compile Include="Core\Interfaces\IInlineTag.cs" />
+    <Compile Include="Core\Interfaces\InlineElement.cs" />
+    <Compile Include="Core\Interfaces\IRenderable.cs" />
+    <Compile Include="Core\Interfaces\ITag.cs" />
+    <Compile Include="Core\Parser\Token.cs" />
+    <Compile Include="Core\Parser\Tokenizer.cs" />
+    <Compile Include="Core\Parser\TokenSubtypes.cs" />
+    <Compile Include="Core\Parser\TokenTypes.cs" />
+    <Compile Include="Core\Tags\Builtin\EachTag.cs" />
+    <Compile Include="Core\Tags\Builtin\IfTag.cs" />
+    <Compile Include="Core\Tags\Builtin\UnlessTag.cs" />
+    <Compile Include="Core\Tags\Builtin\WithTag.cs" />
+    <Compile Include="Core\Tags\Internal\RenderPartialTag.cs" />
+    <Compile Include="Core\Tags\Internal\StaticTag.cs" />
+    <Compile Include="Core\Tags\Internal\TemplateTag.cs" />
+    <Compile Include="Core\Tags\Internal\VariableTag.cs" />
+    <Compile Include="Core\Template.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Tags\Nonstandard\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
