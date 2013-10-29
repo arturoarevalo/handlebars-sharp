@@ -17,15 +17,21 @@ namespace Handlebars.Core
             Partials = new Dictionary <string, BlockElement> ();
         }
 
-        public string Render (Object source, Func <string, IRenderable> resolver = null)
+        public void Render (TextWriter writer, Object source, Func <string, IRenderable> resolver = null)
         {
-            var context = new Context (source, new StringWriter ());
-
-            context.PartialResolver = resolver;
+            var context = new Context (source, writer)
+            {
+                PartialResolver = resolver
+            };
 
             RenderToContext (context);
+        }
 
-            return context.Writer.ToString ();
+        public string Render (Object source, Func <string, IRenderable> resolver = null)
+        {
+            var writer = new StringWriter ();
+            Render (writer, source, resolver);
+            return writer.ToString ();
         }
 
         public override void RenderToContext (Context context)
