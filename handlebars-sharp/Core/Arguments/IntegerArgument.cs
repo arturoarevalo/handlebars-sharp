@@ -22,5 +22,10 @@ namespace Handlebars.Core.Arguments
         {
             return Data.ToString (CultureInfo.InvariantCulture);
         }
+
+        public override string ToString ()
+        {
+            return Data.ToString (CultureInfo.InvariantCulture);
+        }
     }
 }

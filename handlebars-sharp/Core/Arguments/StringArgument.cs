@@ -20,7 +20,12 @@ namespace Handlebars.Core.Arguments
 
         public string ToString (Context context)
         {
-            return Data.ToString (CultureInfo.InvariantCulture);
+            return Data;
+        }
+
+        public override string ToString ()
+        {
+            return Data;
         }
     }
 }

@@ -9,6 +9,7 @@ namespace Handlebars.Core
     using Handlebars.Core.Parser;
     using Handlebars.Core.Tags.Builtin;
     using Handlebars.Core.Tags.Internal;
+    using Handlebars.Core.Tags.Nonstandard;
 
     public class Compiler
     {
@@ -31,6 +32,10 @@ namespace Handlebars.Core
             RegisterTag (new EachTag ());
             RegisterTag (new IfTag ());
             RegisterTag (new UnlessTag ());
+
+            // Register non-standard tags.
+            RegisterTag (new RenderScriptsTag ());
+            RegisterTag (new RenderStylesTag ());
         }
 
 

@@ -22,5 +22,10 @@ namespace Handlebars.Core.Arguments
 
             return results.Value;
         }
+
+        public override string ToString ()
+        {
+            return Key;
+        }
     }
 }
