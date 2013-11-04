@@ -120,6 +120,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Web\HandlebarsView.cs" />
     <Compile Include="Web\HandlebarsViewEngine.cs" />
+    <Compile Include="Web\HandlebarsViewEngineRootContext.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

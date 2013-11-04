@@ -24,7 +24,7 @@
 
         public void Render (ViewContext viewContext, TextWriter writer)
         {
-            var data = engine.RootContext == MustacheViewEngineRootContext.ViewData
+            var data = engine.RootContext == HandlebarsViewEngineRootContext.ViewData
                            ? viewContext.ViewData
                            : viewContext.ViewData.Model;
 
